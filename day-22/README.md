@@ -27,8 +27,9 @@ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/d
 sudo mv /tmp/eksctl /usr/local/bin
 eksctl version
 
-2. Command to install eksctl: 
+2. Command to install eksctl: eksctl create cluster --name eks-1 --region ap-south-1 --zones=ap-south-1a,ap-south-1b --fargate
 
+Note: If we need to maintain serverless-we will use fargate if we need to maintain in servers (EC2) we can mention it based on our requirement.
 
 # AWS EKS 
 
