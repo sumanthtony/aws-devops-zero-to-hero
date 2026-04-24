@@ -48,6 +48,8 @@ Note: If we give FARGATE by default it will create 2 FARGATE profiles in 2 names
 
 4. Once EKS cluster is created we can see OPENID connector provider URL is created because of this AWS allows any Identity Providers or IAM to integrate and work on EKS
 
+--->USECASE: To integrate/communicate one service to another service in AWS we have IAM (Users, Roles) but for other resources like pods or any other resource components needs to communicate we can't give access for these, so for this only we have openID connector based on this we can communicate easily with other services in AWS. 
+
 <img width="909" height="302" alt="image" src="https://github.com/user-attachments/assets/def3807c-4608-4582-9166-9c6985ab439c" />
 
 Note: If we need to maintain serverless-we will use fargate if we need to maintain in servers (EC2) we can mention it based on our requirement.
