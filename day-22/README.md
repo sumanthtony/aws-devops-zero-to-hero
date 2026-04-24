@@ -29,6 +29,9 @@ eksctl version
 
 2. Command to install eksctl: eksctl create cluster --name eks-1 --region ap-south-1 --zones=ap-south-1a,ap-south-1b --fargate
 
+<img width="808" height="396" alt="image" src="https://github.com/user-attachments/assets/59f83db2-648c-417d-9068-556f5ea6549f" />
+
+
 Note: If we need to maintain serverless-we will use fargate if we need to maintain in servers (EC2) we can mention it based on our requirement.
 
 # AWS EKS 
