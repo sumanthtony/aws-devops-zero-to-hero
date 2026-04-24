@@ -165,12 +165,12 @@ Note: In Kubernetes any controller is a pod we are trying to grant ACCESS to AWS
 
 How to setup alb add on: (While creating serviceaccount just change CLUSTER NAME & AWS ACCOUNT NAME, REGION NAME), If we get error for below script execute again it will fix.
 
-eksctl create iamserviceaccount \
+  eksctl create iamserviceaccount \
   --cluster=eks-1 \
   --namespace=kube-system \
   --name=aws-load-balancer-controller \
   --role-name AmazonEKSLoadBalancerControllerRole \
-  --attach-policy-arn=arn:aws:iam:032621928724:policy/AWSLoadBalancerControllerIAMPolicy \
+  --attach-policy-arn=arn:aws:iam::032621928724:policy/AWSLoadBalancerControllerIAMPolicy \
   --region ap-south-1 \
   --approve
 
