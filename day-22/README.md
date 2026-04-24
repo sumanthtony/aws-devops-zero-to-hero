@@ -118,7 +118,11 @@ aws eks associate-access-policy \
   --policy-arn arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy \
   --access-scope type=cluster
 
+7. If we need to get EKS resources to our server we will give below command: (it will take some time to reflect in the server)
 
+aws eks update-kubeconfig --name eks-1 --region ap-south-1
+
+<img width="539" height="56" alt="image" src="https://github.com/user-attachments/assets/38f060fb-6216-4686-9835-df79334885bf" />
 
 # AWS EKS 
 
