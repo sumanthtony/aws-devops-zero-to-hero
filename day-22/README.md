@@ -148,6 +148,9 @@ Note: we can make changes according to our requirement (replicas, images, labels
 
 <img width="507" height="194" alt="image" src="https://github.com/user-attachments/assets/6f8b9692-5156-4c76-b3fb-ebd9f4958720" />
 
+===> Now we need to access the application using Ingress controller --- it will use our ingress-2048 and create LOAD BALANCER for this we need to configure load balancer.
+
+
 
 # AWS EKS 
 
