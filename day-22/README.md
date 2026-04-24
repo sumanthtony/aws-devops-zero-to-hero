@@ -60,8 +60,49 @@ Note: If we need to maintain serverless-we will use fargate if we need to mainta
 
 <img width="618" height="273" alt="image" src="https://github.com/user-attachments/assets/96103df1-8552-4dde-b2c1-31ddf141ce3e" />
 
-
 <img width="650" height="304" alt="image" src="https://github.com/user-attachments/assets/c6183fc4-3550-413e-b3a4-1a9cfa234c8b" />
+
+6. While creating EKS if we get warning like below screenshot follow this:
+
+<img width="903" height="161" alt="image" src="https://github.com/user-attachments/assets/b54df4cb-5d8a-40ef-8ed8-45cac6ca7a2c" />
+
+What AWS is telling you with that button
+
+👉 “Create access entry” =
+Add your IAM user/role into Kubernetes RBAC
+
+This is the new way (Access Entry API) replacing aws-auth ConfigMap.
+
+✅ How to fix it (2 ways)
+🔹 Option 1: Quick fix from Console (recommended)
+
+Click:
+👉 Create access entry
+
+Then:
+
+Select your IAM user/role
+Give permission:
+AmazonEKSClusterAdminPolicy
+
+EKS uses IAM for authentication and Kubernetes RBAC for authorization. Even if a user can access the cluster in AWS, they must be explicitly mapped using access entries or aws-auth to interact with Kubernetes resources.
+
+or with script:
+
+Using CLI (if you have access via creator)
+
+aws eks create-access-entry \
+  --cluster-name eks-1 \
+  --principal-arn <your-iam-arn> \
+  --type STANDARD
+
+aws eks associate-access-policy \
+  --cluster-name eks-1 \
+  --principal-arn <your-iam-arn> \
+  --policy-arn arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy \
+  --access-scope type=cluster
+
+
 
 # AWS EKS 
 
