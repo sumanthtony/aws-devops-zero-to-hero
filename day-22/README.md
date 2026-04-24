@@ -253,6 +253,10 @@ load balancer controller has created a ALB, because we have submitted a ingress 
 
 This ADDRESS we are seeing in the ingress is load balancer that ingress has created by watching the ingress resource
 
+AFTER TASK IS COMPLETED DELETE THE EKS:
+
+eksctl delete cluster --name eks-1 --region ap-south-1
+
   
 # AWS EKS 
 
