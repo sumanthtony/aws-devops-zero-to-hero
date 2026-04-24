@@ -212,6 +212,47 @@ kubectl get deployment -n kube-system aws-load-balancer-controller
 
 <img width="711" height="206" alt="image" src="https://github.com/user-attachments/assets/a70c5c8a-a832-464a-9f7f-e448b02a0e08" />
 
+
+---> If ALB ingress controller doesn't work re-create the below account by changing the LOAD BALANCER NAME and adding last line of override command
+
+eksctl create iamserviceaccount \
+--cluster=eks-1 \
+--namespace=kube-system \
+--name=aws-load-balancer-controller-1 \
+--role-name AmazonEKSLoadBalancerControllerRole \
+--attach-policy-arn=arn:aws:iam::032621928724:policy/AWSLoadBalancerControllerIAMPolicy \
+--region ap-south-1 \
+--approve \
+--override-existing-serviceaccounts
+
+
+DEBUGGING: IF WE GET LIKE SIMILAR ISSUES GO TO CLOUDFORMATION STACK AND DELETE IT THEN RE-CREATE IT WILL WORK, IT HAPPENS DUE TO SOME NETWORK ISSUES OR LATENCY ISSUES.
+
+
+---> Delete the previous helm and re-create it with the new name we have given to load balancer
+
+helm delete aws-load-balancer-controller -n kube-system
+
+
+helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system \
+--set clusterName=eks-1 \
+--set serviceAccount.create=false \
+--set serviceAccount.name=aws-load-balancer-controller-1 \
+--set region=ap-south-1 \
+--set vpcId=vpc-05a9b9538a2afae0e
+
+<img width="499" height="182" alt="alb_ingress pods_created" src="https://github.com/user-attachments/assets/3ba0fceb-e617-469a-a132-5cf5daecb9db" />
+
+<img width="725" height="71" alt="ingress_got the address" src="https://github.com/user-attachments/assets/f0412641-ebc0-4a56-849a-19133529b8ba" />
+
+<img width="946" height="161" alt="lb_creation_cloud_confirmation" src="https://github.com/user-attachments/assets/cbbab3e9-9be5-4f2c-b6bd-507dd70b3a24" />
+
+<img width="641" height="470" alt="final output" src="https://github.com/user-attachments/assets/5987960c-6a64-4516-b2d2-b36db6bb8105" />
+
+load balancer controller has created a ALB, because we have submitted a ingress resource
+
+This ADDRESS we are seeing in the ingress is load balancer that ingress has created by watching the ingress resource
+
   
 # AWS EKS 
 
