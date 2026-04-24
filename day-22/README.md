@@ -62,10 +62,6 @@ Note: If we need to maintain serverless-we will use fargate if we need to mainta
 
 <img width="650" height="304" alt="image" src="https://github.com/user-attachments/assets/c6183fc4-3550-413e-b3a4-1a9cfa234c8b" />
 
-6. While creating EKS if we get warning like below screenshot follow this:
-
-<img width="903" height="161" alt="image" src="https://github.com/user-attachments/assets/b54df4cb-5d8a-40ef-8ed8-45cac6ca7a2c" />
-
 ---> ABOVE FARGATE NODES ARE: 
 Kubernetes virtual nodes
 Backed by Fargate compute internally
@@ -79,6 +75,11 @@ One node per pod (in many cases)
 | Part of Node Group     | ✅ Yes     | ❌ No          |
 | Visible in kubectl     | ✅ Yes     | ✅ Yes         |
 | Managed by             | You       | AWS           |
+
+
+6. While creating EKS if we get warning like below screenshot follow this:
+
+<img width="903" height="161" alt="image" src="https://github.com/user-attachments/assets/b54df4cb-5d8a-40ef-8ed8-45cac6ca7a2c" />
 
 
 What AWS is telling you with that button
