@@ -27,7 +27,9 @@ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/d
 sudo mv /tmp/eksctl /usr/local/bin
 eksctl version
 
-2. Command to install eksctl: eksctl create cluster --name eks-1 --region ap-south-1 --zones=ap-south-1a,ap-south-1b --fargate
+2. Command to install eksctl: eksctl create cluster --name eks-1 --region ap-south-1 --zones=ap-south-1a,ap-south-1b --fargate 
+
+Note: If we give FARGATE by default it will create 2 FARGATE profiles in 2 namespaces (default, kube-system).
 
 <img width="808" height="396" alt="image" src="https://github.com/user-attachments/assets/59f83db2-648c-417d-9068-556f5ea6549f" />
 
