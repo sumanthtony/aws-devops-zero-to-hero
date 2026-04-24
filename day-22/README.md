@@ -1,3 +1,35 @@
+
+#STEPS TO COMPLETE THIS PROJECT:
+
+1. Install AWS CLI, kubectl, and eksctl
+
+Note: Give IAM permission to integate AWS services with the server.
+
+Install AWS CLI
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+TO SET PATH: vim .bashrc
+export PATH=$PATH:/usr/local/bin/
+source .bashrc
+
+Install KUBECTL:
+
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kops-linux-amd64 kubectl
+mv kubectl /usr/local/bin/kubectl
+kubectl version
+
+INSTALL EKSCTL :
+
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin
+eksctl version
+
+2. Command to install eksctl: 
+
+
 # AWS EKS 
 
 ## Introduction
