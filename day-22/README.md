@@ -31,6 +31,13 @@ eksctl version
 
 Note: If we give FARGATE by default it will create 2 FARGATE profiles in 2 namespaces (default, kube-system).
 
+| Concept             | What it controls                      |
+| ------------------- | ------------------------------------- |
+| Fargate Profile     | WHERE pods can run (namespace/labels) |
+| Deployment Replicas | HOW MANY pods run                     |
+
+---> Fargate profiles define where pods run, while the number of pods is controlled by deployment replicas. The 2 pods you see are due to high availability, not multiple Fargate profiles.
+
 <img width="808" height="396" alt="image" src="https://github.com/user-attachments/assets/59f83db2-648c-417d-9068-556f5ea6549f" />
 
 3. Once it is created we can go and check in EKS & CloudFormation (stack) will be created and we can see full details.
