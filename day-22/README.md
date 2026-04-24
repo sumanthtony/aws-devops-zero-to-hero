@@ -124,6 +124,23 @@ aws eks update-kubeconfig --name eks-1 --region ap-south-1
 
 <img width="539" height="56" alt="image" src="https://github.com/user-attachments/assets/38f060fb-6216-4686-9835-df79334885bf" />
 
+---> DEPLOYMENT PROCESS:
+
+===> Here we are creating a new FARGATE PROFILE because using default namespaces which EKS has created (default, kube-system) also we can do but for proper understanding creating NEW FARGATE PROFILE WITH OUR CUSTOM NAMESPACE
+
+eksctl create fargateprofile \
+    --cluster eks-1 \
+    --region ap-south-1 \
+    --name alb-sample-app \
+    --namespace game-2048
+
+<img width="539" height="87" alt="image" src="https://github.com/user-attachments/assets/4c77aea3-9880-4f62-a676-aa73fcd03da8" />
+<img width="729" height="289" alt="image" src="https://github.com/user-attachments/assets/2084272c-ce9d-406d-ab56-ec1724db1f0d" />
+
+
+
+
+
 # AWS EKS 
 
 ## Introduction
