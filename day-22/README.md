@@ -124,6 +124,7 @@ aws eks update-kubeconfig --name eks-1 --region ap-south-1
 
 <img width="539" height="56" alt="image" src="https://github.com/user-attachments/assets/38f060fb-6216-4686-9835-df79334885bf" />
 
+
 ---> DEPLOYMENT PROCESS:
 
 ===> Here we are creating a new FARGATE PROFILE because using default namespaces which EKS has created (default, kube-system) also we can do but for proper understanding creating NEW FARGATE PROFILE WITH OUR CUSTOM NAMESPACE
@@ -137,7 +138,11 @@ eksctl create fargateprofile \
 <img width="539" height="87" alt="image" src="https://github.com/user-attachments/assets/4c77aea3-9880-4f62-a676-aa73fcd03da8" />
 <img width="729" height="289" alt="image" src="https://github.com/user-attachments/assets/2084272c-ce9d-406d-ab56-ec1724db1f0d" />
 
+===> this is the deployment file path written to deploy the application:
 
+https://github.com/kubernetes-sigs/aws-load-balancer-controller/blob/main/docs/examples/2048/2048_full.yaml
+
+Note: we can make changes according to our requirement (replicas, images, labels etc..)
 
 
 
