@@ -171,7 +171,7 @@ eksctl create iamserviceaccount \
   --name=aws-load-balancer-controller \
   --role-name AmazonEKSLoadBalancerControllerRole \
   --attach-policy-arn=arn:aws:iam:032621928724:policy/AWSLoadBalancerControllerIAMPolicy \
-  --region ap-south-1
+  --region ap-south-1 \
   --approve
 
   
