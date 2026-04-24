@@ -209,6 +209,9 @@ Note: In above script only change VPC-ID (EKSCTL created VPC-ID), REGION, CLUSTE
 Verify that the deployments are running.
 
 kubectl get deployment -n kube-system aws-load-balancer-controller
+
+<img width="711" height="206" alt="image" src="https://github.com/user-attachments/assets/a70c5c8a-a832-464a-9f7f-e448b02a0e08" />
+
   
 # AWS EKS 
 
