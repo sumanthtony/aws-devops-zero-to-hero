@@ -161,9 +161,20 @@ eksctl utils associate-iam-oidc-provider --cluster eks-1 --region ap-south-1 --a
 
 ===> After creating follow below README.MD file and complete it
 
-How to setup alb add on
+Note: In Kubernetes any controller is a pod we are trying to grant ACCESS to AWS services such as ALB to talk to API.
 
+How to setup alb add on: (While creating serviceaccount just change CLUSTER NAME & AWS ACCOUNT NAME, REGION NAME), If we get error for below script execute again it will fix.
 
+eksctl create iamserviceaccount \
+  --cluster=eks-1 \
+  --namespace=kube-system \
+  --name=aws-load-balancer-controller \
+  --role-name AmazonEKSLoadBalancerControllerRole \
+  --attach-policy-arn=arn:aws:iam:032621928724:policy/AWSLoadBalancerControllerIAMPolicy \
+  --region ap-south-1
+  --approve
+
+  
 
 # AWS EKS 
 
