@@ -66,6 +66,21 @@ Note: If we need to maintain serverless-we will use fargate if we need to mainta
 
 <img width="903" height="161" alt="image" src="https://github.com/user-attachments/assets/b54df4cb-5d8a-40ef-8ed8-45cac6ca7a2c" />
 
+---> ABOVE FARGATE NODES ARE: 
+Kubernetes virtual nodes
+Backed by Fargate compute internally
+One node per pod (in many cases)
+
+---> IMPORTANT DIFFERENCE
+
+| Feature                | EC2 Nodes | Fargate Nodes |
+| ---------------------- | --------- | ------------- |
+| Visible in EKS Console | ✅ Yes     | ❌ No          |
+| Part of Node Group     | ✅ Yes     | ❌ No          |
+| Visible in kubectl     | ✅ Yes     | ✅ Yes         |
+| Managed by             | You       | AWS           |
+
+
 What AWS is telling you with that button
 
 👉 “Create access entry” =
