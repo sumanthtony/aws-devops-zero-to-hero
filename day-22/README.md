@@ -150,6 +150,19 @@ Note: we can make changes according to our requirement (replicas, images, labels
 
 ===> Now we need to access the application using Ingress controller --- it will use our ingress-2048 and create LOAD BALANCER for this we need to configure load balancer.
 
+===> To create ALB Ingress controller/Ingress controller we need to create IAM OIDC provider because for the controller we have created need to access ALB, to communicate we need IAM OIDC to communicate to other AWS services so are creating OIDC provider:
+
+Note: We have even create using console, but same we are executing with command:
+
+eksctl utils associate-iam-oidc-provider --cluster eks-1 --region ap-south-1 --approve
+
+<img width="681" height="43" alt="image" src="https://github.com/user-attachments/assets/ed2d6b6a-3900-4935-87ac-a6dc48ee0c39" />
+
+
+===> After creating follow below README.MD file and complete it
+
+How to setup alb add on
+
 
 
 # AWS EKS 
