@@ -43,6 +43,12 @@ eksctl version
 
 Note: If we need to maintain serverless-we will use fargate if we need to maintain in servers (EC2) we can mention it based on our requirement.
 
+5. We can see fargate profile is created and we can check in server as well.
+
+<img width="849" height="362" alt="image" src="https://github.com/user-attachments/assets/be9aa6c5-452e-4c95-ad68-fb48d0d2e320" />
+
+<img width="625" height="102" alt="image" src="https://github.com/user-attachments/assets/483a0f30-b6e7-4f0f-b85c-b7352c584a5d" />
+
 # AWS EKS 
 
 ## Introduction
