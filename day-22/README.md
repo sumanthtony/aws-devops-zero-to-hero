@@ -49,6 +49,7 @@ Note: If we need to maintain serverless-we will use fargate if we need to mainta
 
 <img width="618" height="273" alt="image" src="https://github.com/user-attachments/assets/96103df1-8552-4dde-b2c1-31ddf141ce3e" />
 
+
 <img width="650" height="304" alt="image" src="https://github.com/user-attachments/assets/c6183fc4-3550-413e-b3a4-1a9cfa234c8b" />
 
 # AWS EKS 
