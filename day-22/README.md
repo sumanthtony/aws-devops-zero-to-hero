@@ -31,6 +31,15 @@ eksctl version
 
 <img width="808" height="396" alt="image" src="https://github.com/user-attachments/assets/59f83db2-648c-417d-9068-556f5ea6549f" />
 
+3. Once it is created we can go and check in EKS & CloudFormation (stack) will be created and we can see full details.
+
+<img width="936" height="154" alt="image" src="https://github.com/user-attachments/assets/654cc6c1-b37a-494d-8025-de293ba3ddda" />
+
+<img width="933" height="204" alt="image" src="https://github.com/user-attachments/assets/5324b34e-ef1e-4945-85b5-f6bcf222c6b6" />
+
+4. Once EKS cluster is created we can see OPENID connector provider URL is created because of this AWS allows any Identity Providers or IAM to integrate and work on EKS
+
+<img width="909" height="302" alt="image" src="https://github.com/user-attachments/assets/def3807c-4608-4582-9166-9c6985ab439c" />
 
 Note: If we need to maintain serverless-we will use fargate if we need to maintain in servers (EC2) we can mention it based on our requirement.
 
