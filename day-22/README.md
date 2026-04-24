@@ -144,6 +144,9 @@ https://github.com/kubernetes-sigs/aws-load-balancer-controller/blob/main/docs/e
 
 Note: we can make changes according to our requirement (replicas, images, labels etc..)
 
+===> We can see all the resources are created
+
+<img width="507" height="194" alt="image" src="https://github.com/user-attachments/assets/6f8b9692-5156-4c76-b3fb-ebd9f4958720" />
 
 
 # AWS EKS 
